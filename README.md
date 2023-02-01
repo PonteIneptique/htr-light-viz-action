@@ -1,1 +1,6 @@
-# htr-ight-viz-action
+# HTR Light Viz Action
+
+Built with
+
+- Mirador TextOverlay
+- Mirador

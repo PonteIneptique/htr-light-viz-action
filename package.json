@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "build": "esbuild app.jsx --minify --platform=browser --bundle --outfile=mirador-textoverlay.min.js"
+  },
+  "dependencies": {
+    "mirador-textoverlay": "^0.3.7",
+    "mirador": "3.x",
+    "manifesto.js": "4.2.x",
+    "url": "^0.11.0",
+    "esbuild": "^0.17.5",
+    "react": "16.x",
+    "react-dom": "16.x"
+  }
+}

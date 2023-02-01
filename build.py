@@ -24,8 +24,10 @@ manifests = {
 }
 
 i = 0
-for directory in glob.glob("../data/*"):
-    for file in glob.glob(f"{directory}/*.mufichecker.xml"):
+for directory in glob.glob(directory_wildcard):
+    print(f"Treating directory: {directory}")
+    for file in glob.glob(f"{directory}/*{file}"):
+        print(f"Treating file: {file}")
         i += 1
         xml = et.parse(file)
         image_name = str(xml.findall("//{*}fileName")[0].text)

@@ -59,7 +59,7 @@ jobs:
       run: |
         git clone --depth=1 https://github.com/PonteIneptique/htr-light-viz-action.git app
     - name: Install node dependencies
-      run: cd app && npm install --also=dev && npm run build && rm -rf node_modules .git
+      run: cd app && npm install --include=dev && python dirty-fix.py && npm run build && rm -rf node_modules .git
     - name: Build app
       run: cd app && python build.py "../data/*" ".mufichecker.xml" "CREMMA Medii Aevi"
     - name: Deploy

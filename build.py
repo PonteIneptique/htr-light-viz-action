@@ -26,7 +26,7 @@ manifests = {
 i = 0
 for directory in glob.glob(directory_wildcard):
     print(f"Treating directory: {directory}")
-    for file in glob.glob(f"{directory}/*{file}"):
+    for file in glob.glob(f"{directory}/*{file_extension}"):
         print(f"Treating file: {file}")
         i += 1
         xml = et.parse(file)

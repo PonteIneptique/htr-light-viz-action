@@ -65,6 +65,6 @@ with open(f"simple_manifest.json", "w") as f:
     json.dump(manifests, f)
 
 with open("index.html.template") as inp:
-    text = f.read()
+    text = inp.read()
     with open("index.html", "w") as out:
         out.write(text.replace("$PROJ_TITLE", proj_title))
